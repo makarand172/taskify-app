@@ -6,11 +6,10 @@ import "./TodoCard.css";
 
 interface Props {
   todo: Todo;
-  todos: Todo[];
   setTodos: React.ActionDispatch<[action: TodoActions]>;
 }
 
-const TodoCard = ({ todo, todos, setTodos }: Props) => {
+const TodoCard = ({ todo, setTodos }: Props) => {
   const [edit, setEdit] = useState<boolean>(false);
   const [editTodoText, setEditTodoText] = useState<string>(todo.todo);
 
